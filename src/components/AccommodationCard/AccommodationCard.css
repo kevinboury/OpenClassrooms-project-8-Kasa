@@ -1,0 +1,18 @@
+.accommodation-card {
+    background-color: #ce5858;
+
+    width: 86%;
+    height: 340px;
+
+    margin: 7%;
+    border-radius: 16px;
+
+}
+
+.accommodation-card h2 {
+    color: white;
+
+    position: relative;
+    top: 75%;
+    left: 5%;
+}

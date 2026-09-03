@@ -1,4 +1,4 @@
-export interface AccomodationData {
+export interface AccommodationData {
   id: string
   title: string
   cover: string

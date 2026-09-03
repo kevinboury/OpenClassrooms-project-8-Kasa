@@ -1,0 +1,17 @@
+.banner {
+    display: flex;
+
+    height: 225px;
+    border-radius: 16px;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/images/rivage.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.banner h1 {
+    color: white;
+
+    margin: auto;
+}

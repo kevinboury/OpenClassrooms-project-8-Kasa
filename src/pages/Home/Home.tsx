@@ -1,16 +1,21 @@
 import Banner from "../../components/Banner/Banner"
-import LocationCard from "../../components/LocationCard/LocationCard"
+import AccommodationCard from "../../components/AccommodationCard/AccommodationCard"
 
+import './Home.css'
 
 function Home() {
   return (
-    <div>
+    <div className="home">
         Home
         <Banner />
 
-        <div>
-            <LocationCard />
-            <LocationCard />
+        <div className="accommodation-cards-container">
+            <AccommodationCard />
+            <AccommodationCard />
+            <AccommodationCard />
+            <AccommodationCard />
+            <AccommodationCard />
+            <AccommodationCard />
         </div>
     </div>
   )

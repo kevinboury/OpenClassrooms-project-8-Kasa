@@ -1,9 +1,8 @@
-
+import './Banner.css'
 
 function Banner() {
   return (
-    <div>
-        <img src="src/assets/images/rivage.jpg" alt="Bannière - Photo de rivage" />
+    <div className='banner'>
         <h1>Chez vous, partout et ailleurs</h1>
     </div>
   )
