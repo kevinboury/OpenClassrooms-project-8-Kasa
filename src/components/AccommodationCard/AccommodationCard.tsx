@@ -1,11 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import './AccommodationCard.css'
 
-function AccommodationCard() {
+function AccommodationCard({title, id}: {title: string, id: string}) {
   return (
-    <NavLink to="/accommodation/0" className="accommodation-card">
-        <h2>Titre de la location</h2>
-        {/* <NavLink to="/accommodation"></NavLink> */}
+    <NavLink to={`/accommodation/${id}`} className="accommodation-card">
+        <h2>{title}</h2>
     </NavLink>
   )
 }
