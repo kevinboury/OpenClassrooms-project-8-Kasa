@@ -4,14 +4,20 @@
     height: 225px;
     border-radius: 16px;
 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/images/rivage.jpg");
     background-size: cover;
     background-position: center;
 }
-
 
 .banner h1 {
     color: white;
 
     margin: auto;
+}
+
+.banner-home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/src/assets/images/rivage.jpg");
+}
+
+.banner-about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/src/assets/images/montagnes.jpg");
 }

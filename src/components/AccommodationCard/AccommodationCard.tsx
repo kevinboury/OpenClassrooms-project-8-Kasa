@@ -1,11 +1,12 @@
+import { NavLink } from 'react-router-dom'
 import './AccommodationCard.css'
 
 function AccommodationCard() {
   return (
-    <div className="accommodation-card">
-        AccommodationCard
+    <NavLink to="/accommodation/0" className="accommodation-card">
         <h2>Titre de la location</h2>
-    </div>
+        {/* <NavLink to="/accommodation"></NavLink> */}
+    </NavLink>
   )
 }
 

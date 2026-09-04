@@ -6,8 +6,7 @@ import './Home.css'
 function Home() {
   return (
     <div className="home">
-        Home
-        <Banner />
+        <Banner title="Chez vous, partout et ailleurs" page="home" />
 
         <div className="accommodation-cards-container">
             <AccommodationCard />
