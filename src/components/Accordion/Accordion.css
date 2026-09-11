@@ -12,6 +12,10 @@
 
     border-radius: 5px;
 }
+.accordion__arrow {
+    width: 32px;
+    height: 32px;
+}
 .accordion__content {
     padding: 20px;
 }

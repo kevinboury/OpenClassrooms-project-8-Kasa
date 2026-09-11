@@ -1,13 +1,13 @@
 import { useParams } from 'react-router-dom'
 import Accordion from '../../components/Accordion/Accordion'
 import type { AccommodationData } from '../../types/AccommodationData'
+import Carousel from '../../components/Carousel/Carousel'
+import Rating from '../../components/Rating/Rating'
 import './Accommodation.css'
 import { useEffect, useState } from 'react'
 
 // function Accommodation({accommodation}: {accommodation: AccommodationData}) {
 function Accommodation() {
-    const starFull = "/src/assets/icons/star-active.png"
-    const starEmpty = "/src/assets/icons/star-inactive.png"
     
     const { id } = useParams() 
     const [accommodation, setAccommodation] = useState<AccommodationData | null>(null);
@@ -22,8 +22,9 @@ function Accommodation() {
 
     return (
         <div className="accommodation">
-            <img className="accommodation__cover" src={accommodation.cover} alt="Photo du logement"></img>
-
+            {/* <Carousel className="accommodation__carousel" /> */}
+            <Carousel pictures={accommodation.pictures} />
+            
             <div className="accommodation__main-infos-container">
                 <div> 
                     <h1>{accommodation.title}</h1>
@@ -42,16 +43,7 @@ function Accommodation() {
                     </div>
                     <div className="accommodation__rating" aria-label={`Note de ${accommodation.rating}`}> { /*TODO faire component*/ }
                         {
-                            //crée un tableau de 5 éléments undefined puis exécute la fonction sur chacun d'eux en fournissant sa valeur et son index.
-                            // _ est par convention le nom donnée à une valeur dont je ne vais pas me servir dans ce contexte
-                            Array.from(
-                                {length: 5},
-                                (_, index) => (
-                                    index < parseInt(accommodation.rating) 
-                                    ? <img src={starFull} alt="Étoile pleine" />
-                                    : <img src={starEmpty} alt="Étoile vide" />
-                                )
-                            )
+                            <Rating note={parseInt(accommodation.rating)} noteMax={5} />
                         }
                     </div>
                 </div>

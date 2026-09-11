@@ -1,12 +1,5 @@
 .accommodation {
-    padding: ;
-}
-.accommodation__cover {
-    width: 100%;
-    height: 415px;
-    border-radius: 25px;
-
-    object-fit: cover;
+    /* padding: ; */
 }
 
 .accommodation__main-infos-container {
