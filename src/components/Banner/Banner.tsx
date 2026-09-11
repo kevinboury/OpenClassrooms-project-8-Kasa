@@ -1,16 +1,11 @@
 import './Banner.css'
 
-interface BannerProps {
-    title?: string;
-    page: "home" | "about";
-}
-
-function Banner(props: BannerProps) {
-    const bannerPage = "banner-" + props.page;
+function Banner( {title, page} : {title?: string, page: 'home' | 'about'} ) {
+    const bannerPage = "banner-" + page;
 
     return (
         <div className={`banner ${bannerPage}`}>
-            {props.title && <h1>{props.title}</h1>}
+            {title && <h1>{title}</h1>}
         </div>
     )
 }

@@ -21,8 +21,7 @@ function Accommodation() {
     }
 
     return (
-        <div className="accommodation">
-            {/* <Carousel className="accommodation__carousel" /> */}
+        <>
             <Carousel pictures={accommodation.pictures} />
             
             <div className="accommodation__main-infos-container">
@@ -59,7 +58,7 @@ function Accommodation() {
                     <Accordion title="Équipements" contents={accommodation.equipments} />
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

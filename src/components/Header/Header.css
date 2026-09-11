@@ -14,13 +14,13 @@
     align-items: center;
 }
 
-.header__link {
-    margin: auto 0 auto 20px;
+.header__links-container a {
+    margin: auto 0 auto 24px;
 }
 
-/* Sélectionne les <a> qui possèdent également la classe active et qui sont dans .header.
+/* Sélectionne les <a> qui possèdent également la classe active ET qui sont dans .header__links-container
    NavLink ajoute automatiquement la classe CSS "active" au lien actif */
-.header a.active {
+.header__links-container a.active {
     text-decoration: underline;
 }
 

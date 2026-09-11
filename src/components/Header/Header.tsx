@@ -11,8 +11,8 @@ function Header() {
         </NavLink>
         
         <div className="header__links-container">
-            <NavLink to="/" className="header__link">Accueil</NavLink>
-            <NavLink to="/about" className="header__link">À Propos</NavLink>
+            <NavLink to="/">Accueil</NavLink>
+            <NavLink to="/about">À Propos</NavLink>
         </div>
     </div>
   )
