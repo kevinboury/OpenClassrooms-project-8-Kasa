@@ -24,36 +24,36 @@ function Accommodation() {
         <div className="accommodation">
             <img className="accommodation__cover" src={accommodation.cover} alt="Photo du logement"></img>
 
-            <div className="accommodation__title-host-container">
-                <div className="accommodation__title-container">
+            <div className="accommodation__main-infos-container">
+                <div> 
                     <h1>{accommodation.title}</h1>
                     <p>{accommodation.location}</p>
+                    <div className="accommodation__tags-container">
+                        {accommodation.tags.map( (tag, index) => (
+                            <p key={index}>{tag}</p>
+                        ))}
+                    </div>
                 </div>
-                <div className="accommodation__host-container">
-                    <p className="accommodation__host-name">{accommodation.host.name}</p>
-                    <img className="accommodation__host-avatar" src={accommodation.host.picture} alt={"Avatar de "+accommodation.host.name}></img>
-                </div>
-            </div>
 
-            <div className="accommodation__tags-rating-container">
-                <div className="accommodation__tags-container">
-                    {accommodation.tags.map( (tag, index) => (
-                        <p key={index}>{tag}</p>
-                    ))}
-                </div>
-                <div className="accommodation__rating" aria-label={`Note de ${accommodation.rating}`}> { /*TODO faire component*/ }
-                    {
-                        //crée un tableau de 5 éléments undefined puis exécute la fonction sur chacun d'eux en fournissant sa valeur et son index.
-                        // _ est par convention le nom donnée à une valeur dont je ne vais pas me servir dans ce contexte
-                        Array.from(
-                            {length: 5},
-                            (_, index) => (
-                                index < parseInt(accommodation.rating) 
-                                ? <img src={starFull} alt="Étoile pleine" />
-                                : <img src={starEmpty} alt="Étoile vide" />
+                <div className="accommodation__host-rating-container">
+                    <div className="accommodation__host-container">
+                        <p className="accommodation__host-name">{accommodation.host.name}</p>
+                        <img className="accommodation__host-avatar" src={accommodation.host.picture} alt={"Avatar de "+accommodation.host.name}></img>
+                    </div>
+                    <div className="accommodation__rating" aria-label={`Note de ${accommodation.rating}`}> { /*TODO faire component*/ }
+                        {
+                            //crée un tableau de 5 éléments undefined puis exécute la fonction sur chacun d'eux en fournissant sa valeur et son index.
+                            // _ est par convention le nom donnée à une valeur dont je ne vais pas me servir dans ce contexte
+                            Array.from(
+                                {length: 5},
+                                (_, index) => (
+                                    index < parseInt(accommodation.rating) 
+                                    ? <img src={starFull} alt="Étoile pleine" />
+                                    : <img src={starEmpty} alt="Étoile vide" />
+                                )
                             )
-                        )
-                    }
+                        }
+                    </div>
                 </div>
             </div>
 

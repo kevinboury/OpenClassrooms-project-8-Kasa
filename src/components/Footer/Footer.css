@@ -1,8 +1,21 @@
 .footer {
     text-align: center;
-    padding: 32px 0 16px 0;
+    padding: 48px 0 32px 0;
 
     background-color: black;
 
     color: white;
+}
+.footer p {
+    font-weight: 500;
+    font-size: 24px;
+    padding-top: 32px;
+    margin: auto;
+}
+
+@media (max-width: 426px) {
+    .footer p {
+        font-size: 12px;
+        width: 134px;
+    }
 }

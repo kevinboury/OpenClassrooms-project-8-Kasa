@@ -1,5 +1,13 @@
 .layout {
     /* width: 100%; */
+    /* margin: 0 auto; */
+}
+
+.layout__top-page {
     max-width: 1240px;
     margin: 0 auto;
+}
+
+.layout__top-page main {
+    padding: 0 25px;
 }

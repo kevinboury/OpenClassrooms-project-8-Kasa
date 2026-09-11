@@ -5,15 +5,17 @@ import Footer from '../Footer/Footer'
 import './Layout.css'
 
 function Layout() {
-  return (
-    <div className='layout'>
-      <Header />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
-  )
+    return (
+        <div>
+            <div className='layout__top-page'>
+                <Header />
+                <main>
+                    <Outlet />
+                </main>
+            </div>
+            <Footer />
+        </div>
+    )
 }
 
 export default Layout

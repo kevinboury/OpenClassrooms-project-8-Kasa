@@ -23,7 +23,7 @@ function Home() {
                 {/* <AccommodationCard title="Titre" id="c67ab8a7" /> */}
                 {accommodations.map(
                     (accommodation) => (
-                        <AccommodationCard key={accommodation.id} title={accommodation.title} id={accommodation.id} />
+                        <AccommodationCard key={accommodation.id} title={accommodation.title} id={accommodation.id} cover={accommodation.cover}/>
                     )
                 )}
             </div>

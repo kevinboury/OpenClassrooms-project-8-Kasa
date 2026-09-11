@@ -6,13 +6,28 @@
 
     margin: 7%;
     border-radius: 16px;
+    
+    position: relative
 
 }
 
+/* position: absolute sur le h2 : Le titre "flotte" désormais au-dessus de l'image.
+Il ne prend plus aucune place "virtuelle" dans le flux, ce qui résout le problème de décalage.
+position: relative sur le parent : Indique au titre qu'il doit se positionner par rapport à cette carte 
+et non par rapport à toute la page. */
 .accommodation-card h2 {
     color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 
-    position: relative;
-    top: 80%;
+    position: absolute;
+    bottom: 10%;
     left: 5%;
+    z-index: 1;
+}
+
+.accommodation-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
 }

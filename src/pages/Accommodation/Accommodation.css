@@ -1,52 +1,103 @@
+.accommodation {
+    padding: ;
+}
 .accommodation__cover {
     width: 100%;
     height: 415px;
+    border-radius: 25px;
 
     object-fit: cover;
 }
 
-.accommodation__title-host-container {
+.accommodation__main-infos-container {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    margin: 25px auto;
 }
-.accommodation__title-container h1 {
+
+.accommodation__main-infos-container h1 {
     color: var(--main-color);
     font-size: 36px;
-}
-.accommodation__host-container {
-    display: flex;
-}
-.accommodation__host-name {
-    color: var(--main-color);
-}
-.accommodation__host-avatar {
-    width: 64px;
-    height: 64px;
-    border-radius: 32px;
-}
-.accommodation__tags-rating-container {
-    display: flex;
-    justify-content: space-between;
+    font-weight: 500;
+    margin-bottom: 12px;
 }
 .accommodation__tags-container {
     display: flex;
+    margin: 20px auto 0px;
 }
 .accommodation__tags-container p {
     text-align: center;
     color: white;
     background-color: var(--main-color);
     border-radius: 5px;
-    width: 115px;
-    margin: auto 5px;
+    margin: auto 10px auto 0;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 12px;
 }
+
+.accommodation__host-rating-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.accommodation__host-container {
+    display: flex;
+    align-items: center;
+}
+.accommodation__host-name {
+    color: var(--main-color);
+    padding: 12px;
+    width: 93px;
+    text-align: right;
+}
+.accommodation__host-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+}
+
 .accommodation__rating {
     display: flex;
+    align-items: center;
+}
+.accommodation__rating img{
+    height: 36px;
+    width: 36px;
 }
 
 .accommodation__accordions-container {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 .accommodation__accordion-container {
     width: 45%;
+}
+
+
+@media (max-width: 426px) {
+    .accommodation__main-infos-container {
+        flex-direction: column;
+    }
+
+    .accommodation__host-rating-container {
+        flex-direction: row-reverse;
+    }
+    
+    .accommodation__rating img{
+        height: 18px;
+        width: 18px;
+    }
+
+    .accommodation__accordions-container {
+        flex-direction: column;
+    }
+    
+    .accommodation__accordion-container {
+        width: 95%;
+    }
+
+
 }

@@ -12,9 +12,13 @@ function Accordion ( {title, contents} : {title: string, contents: string[] } ) 
             <div className="accordion">
                 <div className="accordion__title">
                     <h2>{title}</h2>
-                    <span onClick={ () => setIsOpen(!isOpen)}>
+                    <button
+                        type="button"
+                        onClick={ () => setIsOpen(!isOpen)}
+                        aria-label={isOpen ? "Fermer l'accordéon" : "Ouvrir l'accordéon"}
+                    >
                         {isOpen ? arrowOpen : arrowClose}
-                    </span>
+                    </button>
                 </div>
                 { isOpen && (
                     <div className="accordion__content">

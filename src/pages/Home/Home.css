@@ -7,7 +7,13 @@
 
 .accommodation-cards-container {
     width: 100%;
-    margin: auto;
+    margin: 20px auto;
+    padding: 20px;
+
+    border-radius: 16px;
+
+    background-color: #F6F6F6;
+;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -21,9 +27,10 @@
     }
 }
 
-@media (max-width: 425px) { 
+@media (max-width: 426px) { 
     
     .accommodation-cards-container {
         grid-template-columns: 1fr;
+        background-color: white;
     }
 }
