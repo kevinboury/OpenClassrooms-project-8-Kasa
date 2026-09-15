@@ -3,7 +3,7 @@ import Arrow from "../Arrow/Arrow";
 import "./Carousel.css";
 
 
-function Carousel ( {pictures} : {pictures: string[]} ) {
+function Carousel ( { pictures } : { pictures: string[] } ) {
 
     const [pictureIndex, setPictureIndex] = useState(0);
 
