@@ -22,3 +22,16 @@
     margin: 0 0 80px 0;
     text-decoration: underline;
 }
+
+@media (max-width: 426px) {
+    .error h1 {
+        font-size: 96px;
+        margin: 100px auto 100px auto;
+    }
+    .error p {
+        font-size: 18px;
+    }
+    .error a {
+        font-size: 14px;
+    }
+}
