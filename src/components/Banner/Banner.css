@@ -29,6 +29,7 @@
 @media (max-width: 426px) {
     .banner {
         text-align: left;
+        height: 115px;
     }
     .banner h1 {
         font-size: 24px;

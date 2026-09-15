@@ -1,4 +1,5 @@
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from "react-router-dom";
+
 import Accordion from '../../components/Accordion/Accordion'
 import type { AccommodationData } from '../../types/AccommodationData'
 import Carousel from '../../components/Carousel/Carousel'
@@ -6,23 +7,37 @@ import Rating from '../../components/Rating/Rating'
 import './Accommodation.css'
 import { useEffect, useState } from 'react'
 
-// function Accommodation({accommodation}: {accommodation: AccommodationData}) {
 function Accommodation() {
     
     const { id } = useParams() 
     const [accommodation, setAccommodation] = useState<AccommodationData | null>(null);
+    const navigate = useNavigate();
 
     useEffect( () => {
-        fetch(`http://localhost:8080/api/properties/${id}`).then(response => response.json()).then(data => setAccommodation(data))
-    }, [ id ])
+        fetch(`http://localhost:8080/api/properties/${id}`).then
+            (
+                response => {
+                    if( !response.ok ){
+                        throw new Error(`Erreur HTTP : ${response.status}`);
+                    }
 
-    if( !accommodation ){
-        return <div>Error</div>
+                    return response.json();
+                }
+            ).then( data => setAccommodation(data) ).catch( (error) => {
+                console.error(error);
+                navigate("/error")
+            })
+        }, [ id, navigate ])
+
+    if (!accommodation) {
+        return <div>Chargement...</div>;
     }
 
     return (
         <>
-            <Carousel pictures={accommodation.pictures} />
+            <div className="accommodation__carousel-container">
+                <Carousel pictures={accommodation.pictures} />
+            </div>
             
             <div className="accommodation__main-infos-container">
                 <div> 
@@ -61,5 +76,7 @@ function Accommodation() {
         </>
     )
 }
+
+    
 
 export default Accommodation

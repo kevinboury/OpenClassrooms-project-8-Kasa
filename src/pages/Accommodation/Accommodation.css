@@ -1,3 +1,8 @@
+.accommodation__carousel-container {
+    width: 100%;
+    height: 415px;
+}
+
 .accommodation__main-infos-container {
     display: flex;
     justify-content: space-between;
@@ -62,13 +67,29 @@
     margin-bottom: 30px;
 }
 .accommodation__accordion-container {
-    width: 45%;
+    width: 47%;
+    height: 100px;
+    margin: 20px 0;
 }
 
 
 @media (max-width: 426px) {
+    .accommodation__carousel-container {
+        height: 255px;
+    }
+
     .accommodation__main-infos-container {
         flex-direction: column;
+        margin: 10px auto;
+    }
+    .accommodation__main-infos-container h1 {
+        font-size: 18px;
+    }
+    .accommodation__main-infos-container p {
+        font-size: 14px;
+    }
+    .accommodation__tags-container p {
+        font-size: 10px;
     }
 
     .accommodation__host-rating-container {
@@ -79,13 +100,22 @@
         height: 18px;
         width: 18px;
     }
+    
+    .accommodation__host-avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+    }
 
     .accommodation__accordions-container {
         flex-direction: column;
+        margin-bottom: 20px;
     }
     
     .accommodation__accordion-container {
-        width: 95%;
+        width: 100%;
+        height: 30px;
+        margin: 10px auto;
     }
 
 

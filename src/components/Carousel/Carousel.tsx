@@ -12,23 +12,33 @@ function Carousel ( {pictures} : {pictures: string[]} ) {
     return (
         <div className="carousel">
 
-            <button
-                type="button"
-                onClick={ () => setPictureIndex((pictureIndex - 1 + size) % size)}
-                aria-label="swipe à gauche"
-                className="carousel__button-left"
-            >
-                <Arrow className="carousel__arrow" direction='LEFT' />
-            </button>
+            {/* Après un &&, JSX n'attend qu'un seul bloc, il faut donc mettre encadrer les boutons */}
+            { (size > 1) && 
+                <>
+                    <button
+                        type="button"
+                        onClick={ () => setPictureIndex((pictureIndex - 1 + size) % size)}
+                        aria-label="swipe à gauche"
+                        className="carousel__button-left"
+                    >
+                        <Arrow className="carousel__arrow" direction='LEFT' />
+                    </button>
 
-            <button
-                type="button"
-                onClick={ () => setPictureIndex((pictureIndex+1) % size)}
-                aria-label="swipe à droite"
-                className="carousel__button-right"
-            >
-                <Arrow className="carousel__arrow" direction='RIGHT' />
-            </button>
+                    <button
+                        type="button"
+                        onClick={ () => setPictureIndex((pictureIndex+1) % size)}
+                        aria-label="swipe à droite"
+                        className="carousel__button-right"
+                    >
+                        <Arrow className="carousel__arrow" direction='RIGHT' />
+                    </button>
+
+                    <span className="carousel__counter">
+                        {pictureIndex + 1} / {size}
+                    </span>
+                </> 
+            }
+            
 
             {pictures.map( (picture, index) => {
                 return (
