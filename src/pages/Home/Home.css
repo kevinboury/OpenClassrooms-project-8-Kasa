@@ -20,7 +20,7 @@
     }
 }
 
-@media (max-width: 426px) { 
+@media (max-width: 500px) { 
     
     .home__accommodation-cards-container {
         grid-template-columns: 1fr;

@@ -72,7 +72,7 @@
 }
 
 
-@media (max-width: 426px) {
+@media (max-width: 500px) {
     .accommodation__carousel-container {
         height: 255px;
     }

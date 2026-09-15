@@ -3,9 +3,9 @@
     justify-content: space-between;
 
     height: 70px;
-    margin: 50px 0;
+    margin: 50px auto;
 
-    padding: 0 25px;
+    padding: 0 24px;
 }
 
 .header__links-container {
@@ -15,7 +15,7 @@
 }
 
 .header__links-container a {
-    margin: auto 0 auto 24px;
+    margin: auto 0 auto 22px;
 }
 
 /* Sélectionne les <a> qui possèdent également la classe active ET qui sont dans .header__links-container
@@ -25,7 +25,7 @@
 }
 
 
-@media (max-width: 426px) {
+@media (max-width: 500px) {
     .header {
         height: 48px;
         margin: 25px 0;

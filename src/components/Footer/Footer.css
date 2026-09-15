@@ -13,7 +13,7 @@
     margin: auto;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 500px) {
     .footer p {
         font-size: 12px;
         width: 134px;

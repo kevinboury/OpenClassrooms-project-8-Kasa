@@ -43,7 +43,7 @@
 }
 
 
-@media (max-width: 426px) {
+@media (max-width: 500px) {
     .carousel {
         --carousel__arrow-width: 24px;
         --carousel__arrow-height: 24px;

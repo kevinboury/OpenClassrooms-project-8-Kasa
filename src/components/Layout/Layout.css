@@ -1,6 +1,7 @@
 .layout {
-    /* width: 100%; */
-    /* margin: 0 auto; */
+    min-height: 100vh;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .layout__top-page {
@@ -10,4 +11,5 @@
 
 .layout__top-page main {
     padding: 0 25px;
+    flex: 1;
 }

@@ -23,7 +23,7 @@
     text-decoration: underline;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 500px) {
     .error h1 {
         font-size: 96px;
         margin: 100px auto 100px auto;

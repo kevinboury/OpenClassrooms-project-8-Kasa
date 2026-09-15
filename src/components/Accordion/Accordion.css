@@ -21,7 +21,7 @@
 }
 
 
-@media (max-width: 426px) {
+@media (max-width: 500px) {
     .accordion__title {
         padding: 5px;
     }

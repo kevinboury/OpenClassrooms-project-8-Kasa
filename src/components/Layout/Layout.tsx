@@ -6,7 +6,7 @@ import './Layout.css'
 
 function Layout() {
     return (
-        <div>
+        <div className='layout'>
             <div className='layout__top-page'>
                 <Header />
                 <main>
