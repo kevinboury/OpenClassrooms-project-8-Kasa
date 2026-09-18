@@ -15,9 +15,23 @@
 .accordion__arrow {
     width: 32px;
     height: 32px;
+
+    transition: transform 300ms ease;
+}
+.accordion__arrow--open {
+    transform: rotate(-180deg);
 }
 .accordion__content {
     padding: 20px;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms ease;
+}
+.accordion__content--open {
+    grid-template-rows: 1fr;
+}
+.accordion__content-inner {
+    overflow: hidden;
 }
 
 

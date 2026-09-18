@@ -15,25 +15,27 @@ function Accordion ( {title, contents} : {title: string, contents: string[] } ) 
                     <button
                         type="button"
                         onClick={ () => setIsOpen(!isOpen)}
+                        aria-expanded={isOpen}
                         aria-label={isOpen ? "Fermer l'accordéon" : "Ouvrir l'accordéon"}
                     >
-                        { isOpen ? 
+                        {/* { isOpen ? 
                             <Arrow className='accordion__arrow' direction='DOWN' /> : 
                             <Arrow className='accordion__arrow' direction='UP' />
-                        }
+                        } */}
+                        <Arrow className={`accordion__arrow ${isOpen ? "accordion__arrow--open" : "" }`} direction='UP' />
+
                     </button>
                 </div>
-
-                { isOpen && 
-                    (   <div className="accordion__content">
-                            {contents.map(
-                                (content, index) => (
-                                    <p key={index}>{content}</p>
-                                )
-                            )}
-                        </div>
-                    )
-                }
+                
+                <div className={`accordion__content ${isOpen ? "accordion__content--open" : ""}`}>
+                    <div className="accordion__content-inner">
+                        {contents.map(
+                            (content, index) => (
+                                <p key={index}>{content}</p>
+                            )
+                        )}
+                    </div>
+                </div>
             </div>
         </div>
 

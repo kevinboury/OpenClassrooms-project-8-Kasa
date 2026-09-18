@@ -18,14 +18,26 @@ describe('Accordion',  () => {
         expect(title).toBeInTheDocument();
     });
 
-    it("cache le contenu lorsque l'Accordion est fermé", () => {
+    // it("cache le contenu lorsque l'Accordion est fermé", () => {
+    //     render(
+    //         <Accordion title="test_title" contents={["test_content_1"]} />
+    //     );
+
+    //     const content = screen.queryByText("test_content_1"); // retourne null si l'élément n'existe pas
+
+    //     expect(content).not.toBeInTheDocument();
+    // });
+    it("le contenu est caché par défaut", () => {
         render(
-            <Accordion title="test_title" contents={["test_content_1"]} />
+            <Accordion
+                title="test_title"
+                contents={["test_content_1"]}
+            />
         );
 
-        const content = screen.queryByText("test_content_1"); // retourne null si l'élément n'existe pas
+        const button = screen.getByRole("button");
 
-        expect(content).not.toBeInTheDocument();
+        expect(button).toHaveAttribute("aria-expanded", "false");
     });
     
 
@@ -89,15 +101,11 @@ describe('Accordion',  () => {
 
         //le premier click déplie l'accordéon
         await user.click(button)
-        expect(
-            screen.getByText("test_content_1")
-        ).toBeInTheDocument()
+        expect(button).toHaveAttribute("aria-expanded", "true");
 
         //le deuxième click referme l'accordéon
         await user.click(button)
-        expect(
-            screen.queryByText("test_content_1")
-        ).not.toBeInTheDocument()
+        expect(button).toHaveAttribute("aria-expanded", "false");
     });
 
 });
